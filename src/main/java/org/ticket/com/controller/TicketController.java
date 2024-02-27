@@ -2,6 +2,7 @@ package org.ticket.com.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.ticket.com.model.Ticket;
 import org.ticket.com.service.TicketService;
@@ -49,5 +50,11 @@ public class TicketController {
     @GetMapping("/search")
     public List<Ticket> findByDestination(@RequestParam("destination") String destination) {
         return service.findByDestination(destination);
+    }
+
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @ExceptionHandler
+    public String handleExcep(Exception e) {
+        return null;
     }
 }
