@@ -24,4 +24,9 @@ public class TravelController {
     public List<TravelOption> getAll() {
         return service.getAllTravelOptions();
     }
+
+    public String handleTravelException() {
+        return null;
+    }
+
 }
