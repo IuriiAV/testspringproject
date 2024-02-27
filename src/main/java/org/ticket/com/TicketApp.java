@@ -7,6 +7,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 //JPA -(set of interfaces) -> ORM Hibernate <-> Database
 
+//OFF - nothing
+//FATAL - problem jvm
+//ERROR
+//WARN
+//INFO
+//DEBUG
+//TRACE
+//ALL
+
+
 @SpringBootApplication
 public class TicketApp {
 

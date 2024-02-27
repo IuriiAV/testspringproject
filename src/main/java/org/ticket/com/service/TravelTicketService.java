@@ -11,4 +11,6 @@ public interface TravelTicketService {
     List<TravelTicket> findByPeriod(String period);
 
     TravelTicket save(TravelTicket ticket);
+
+    TravelTicket findById(long id);
 }

@@ -1,11 +1,13 @@
 package org.ticket.com.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.ticket.com.model.Ticket;
 import org.ticket.com.service.TicketService;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 //CRUD -Create,Read,Update,Delete
 
@@ -18,6 +20,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/tickets")
+@Slf4j
 public class TicketController {
 
     @Autowired
@@ -25,11 +28,16 @@ public class TicketController {
 
     @GetMapping
     public List<Ticket> getAll() {
-        return service.findAll();
+        log.info("Start method getAll in ticket controller");
+        List<Ticket> tickets = service.findAll();
+        log.debug("List all tickets is {}", tickets);
+        log.info("End method getAll in ticket controller");
+        return tickets;
     }
 
     @GetMapping("/{id}")
     public Ticket getById(@PathVariable(name = "id") int id) {
+        log.info("Call method getbyId with id {} for ticket controller", id);
         return service.findById(id);
     }
 

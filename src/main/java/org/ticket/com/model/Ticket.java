@@ -52,4 +52,14 @@ public class Ticket extends TravelOption {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "id=" + id +
+                ", source='" + source + '\'' +
+                ", destination='" + destination + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }
