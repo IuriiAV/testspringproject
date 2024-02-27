@@ -2,6 +2,7 @@ package org.ticket.com.model;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 
 @Entity
 @Table(name = "travel_ticket")
@@ -11,9 +12,16 @@ public class TravelTicket extends TravelOption {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto increment
     private long id;
 
+    //@Pattern()
+    //@Email
+    //@NotNull
+    //@NotEmpty
+    @NotBlank(message = "Period cannot be empty")
     @Column(name = "period")
     private String period;
 
+    @Max(value = 150, message = "Incorrect max value")
+    @Min(value = 10, message = "Incorrect min value")
     private double price;
 
     public TravelTicket() {
