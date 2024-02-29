@@ -13,7 +13,7 @@ import javax.persistence.EntityNotFoundException;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+//@Service
 @Slf4j
 public class TravelTicketServiceImpl implements TravelTicketService {
 
