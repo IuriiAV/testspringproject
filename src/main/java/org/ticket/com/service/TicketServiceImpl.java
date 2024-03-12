@@ -9,7 +9,6 @@ import org.ticket.com.repository.TicketRepository;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
 @Slf4j
 public class TicketServiceImpl implements TicketService {
 
