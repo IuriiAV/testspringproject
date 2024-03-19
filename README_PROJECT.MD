@@ -14,3 +14,27 @@ learn about mapstruct to convert dto to entity and vice versa)
 7) Check fields
 8) getAll - list all entity
 9) PostgreSQL or MySQL
+
+-------------------------------
+SPRINT 2
+
+1) Product - edit , delete
+2) Category - edit, delete
+3) user - edit
+4) Products /id -detail info, 
+5) order by id, delete
+6) handle exceptions 
+7) list with filter !!!
+8) RELATIONSHIPS : @OneToOne
+
+category as string :
+-- 
+private Category category;
+
+SPRINT 3 part 1:
+1) add swagger (as minimal for 1 method in controller)
+2) add LB(init + data)
+3) add test for service and controller
+4) Relationships
+--- order system ---
+5) logs

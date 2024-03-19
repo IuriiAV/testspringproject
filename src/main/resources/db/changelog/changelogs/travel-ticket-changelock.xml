@@ -1,0 +1,42 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="1" author="admin">
+        <comment>create table ticket</comment>
+        <createTable tableName="travel_ticket">
+            <column name="id" autoIncrement="true" type="BIGINT">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="travel_ticket_pkey"/>
+            </column>
+            <column name="period" type="VARCHAR(255)"/>
+            <column name="price" type="DECIMAL"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="admin">
+        <insert tableName="travel_ticket">
+            <column name="period" value="Month"/>
+            <column name="price" value="25"/>
+        </insert>
+        <insert tableName="travel_ticket">
+            <column name="period" value="Year"/>
+            <column name="price" value="150"/>
+        </insert>
+        <insert tableName="travel_ticket">
+            <column name="period" value="Day"/>
+            <column name="price" value="5"/>
+        </insert>
+    </changeSet>
+
+<!--    <changeSet id="2" author="admin">-->
+<!--        <addColumn tableName="travel_ticket">-->
+<!--            <column name=""></column>-->
+<!--        </addColumn>-->
+<!--    </changeSet>-->
+
+</databaseChangeLog>

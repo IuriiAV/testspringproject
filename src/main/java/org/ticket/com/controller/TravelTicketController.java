@@ -52,7 +52,7 @@ public class TravelTicketController {
         return service.save(ticket);
     }
 
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    //@ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler({TravelTicketInvalidArgumentException.class,
             TravelTicketNotFoundException.class})
     public String handleInvalidArgumentException(Exception exception) {
